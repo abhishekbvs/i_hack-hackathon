@@ -20,16 +20,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
        $list1 = ArrayHelper::map(Map::find()->all(), 'id', 'name');
-         echo $form->field($model, 'id')->dropDownList($list1,
+         echo $form->field($model, 'map_id')->dropDownList($list1,
       [  'prompt' => 'Choose Map',
       ]);
     ?>
     <?php
        $list2 = ArrayHelper::map(Shape::find()->all(), 'id', 'name');
-         echo $form->field($model, 'id')->dropDownList($list2,
+         echo $form->field($model, 'object_id')->dropDownList($list2,
       [  'prompt' => 'Choose Shape',
       ]);
     ?>
+    <?= $form->field($model, 'noo')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

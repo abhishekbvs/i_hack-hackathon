@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\base\Model;
 
 /**
  * This is the model class for table "map".
@@ -11,7 +12,7 @@ use Yii;
  * @property string $name
  * @property string $location
  */
-class DummyModel extends \yii\db\ActiveRecord
+class DummyModel extends Model
 {
     public $map_id;
     public $object_id;

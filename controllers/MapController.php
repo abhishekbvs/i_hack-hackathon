@@ -83,7 +83,7 @@ class MapController extends Controller
             $model->file = UploadedFile::getInstance($model,'file');
             $map = new Map();
             $map->name = $model->file->baseName;
-            $map->location = 'uploads/'.$model->file->baseName;
+            $map->location = 'uploads/'.$model->file->baseName.'.'.$model->file->extension;
             $map->save();
 
             if($model->validate()){
